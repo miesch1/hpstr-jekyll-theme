@@ -5,25 +5,25 @@ reading_time:     false
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url:
+url: http://www.excitedandconfused.com/
 
 # Owner/author information
-owner:
-  name:           Your Name
+owner:          
+  name:           Mike Chambers
   avatar:         avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
-  email:          you@email.com
+  email:          chambers.mike@gmail.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
-  stackexchange:  
-  linkedin:       
-  instagram:      
-  flickr:         
-  tumblr:         
+  #twitter:        
+  #facebook:       
+  github:          miesch1
+  stackexchange:  miesch1
+  #linkedin:       
+  #instagram:      
+  #flickr:         
+  #tumblr:         
   # google plus id, include the '+', eg +mmistakes
-  google_plus:
+  google_plus: +chambers.mike
 
 # Background image to be tiled on all pages
 background: 
