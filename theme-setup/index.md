@@ -1,29 +1,22 @@
 ---
 layout: page
 title: Theme Setup
-description: "Instructions on how to install and customize the modern Jekyll theme HPSTR."
-image:
-  feature: abstract-11.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+description: "Instructions on how to install and customize the modern Jekyll theme Neo-HPSTR."
 share: true
-modified: 2016-06-01T15:14:43-04:00
 ---
 
-General notes and suggestions for customizing **HPSTR**.
-
-HPSTR now requires [Jekyll](http://jekyllrb.com/) 3.0. Make sure to run `bundle update` if you aren't on the latest version to update all gem dependencies.
+General notes and suggestions for customizing **Neo-HPSTR**.
 
 ## Basic Setup for a new Jekyll site
 
 1. [Install Bundler](http://bundler.io) `gem install bundler` and then install [Jekyll](http://jekyllrb.com) and all dependencies `bundle install`.
-2. Fork the [HPSTR Jekyll Theme repo](https://github.com/mmistakes/hpstr-jekyll-theme/fork).
+2. Fork the [Neo-HPSTR Jekyll Theme repo](http://github.com/aron-bordin/neo-hpstr-jekyll-theme/fork).
 3. Clone the repo you just forked and rename it.
 4. Edit `_config.yml` to personalize your site.
 5. Check out the sample posts in `_posts` to see examples for pulling in large feature images, assigning categories and tags, and other YAML data.
 6. Read the documentation below for further customization pointers and documentation.
 
-<div markdown="0"><a href="https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip" class="btn">Download the Theme</a></div>
+<div markdown="0"><a href="http://github.com/aron-bordin/neo-hpstr-jekyll-theme/archive/master.zip" class="btn">Download the Theme</a></div>
 
 **Pro-tip:** Delete the `gh-pages` branch after cloning and start fresh by branching off `master`. There is a bunch of garbage in `gh-pages` used for the theme's demo site that I'm guessing you don't want on your site.
 {: .notice}
@@ -33,41 +26,154 @@ HPSTR now requires [Jekyll](http://jekyllrb.com/) 3.0. Make sure to run `bundle 
 ## Setup for an Existing Jekyll site
 
 1. Clone the following folders: `_includes`, `_layouts`, `_sass`, `assets`, and `images`.
-2. Clone the following folders/files and personalize content as need: `about/`, `posts/`, `tags/`, `feed.xml` and `index.html`.
-3. Edit `_config.yml` to personalize your site.
+2. Clone the following folders/files and personalize content as need: `posts/`, `tags/`, `feed.xml` and `index.html`.
+3. Set the following variables in your `config.yml` file:
+
+{% highlight yaml %}
+
+title:            Blog Title
+description:      Describe your website here.
+disqus_shortname: neohpstrtheme # put your disqus here
+reading_time:     true # if true, shows the estimated reading time for a post
+words_per_minute: 200
+logo:             images/logo.png # logo visible in the topbar
+# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
+# When testing locally leave blank or use http://localhost:4000
+# url: http://aronbordin.com/neo-hpstr-jekyll-theme
+
+# draw your top menu here
+# each item must have a title and a url.
+#   To list post categories. use type: 'categories'
+#   To create sub categories. add a submenu item
+# See the example
+menu:
+  - title: 'Home'
+    url: '/'
+  - title: 'Fork'
+    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
+  - title: 'Install'
+    url: '/theme-setup/'
+  - title: 'Tags'
+    url: '/tags'
+  - title: 'Categories'
+    url: '/categories'
+    type: 'categories'
+  - title: 'Favorites'
+    url: '#'
+    submenu:
+      - title: 'highlighter'
+        url: '/code-highlighting-post/'
+      - title: 'intro'
+        url: '/readability-post/'
+
+# Owner/author information
+owner:
+  name:           Your name
+  site:           http://aronbordin.com
+  avatar:         images/avatar.jpg
+  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
+  email:          you@email.com
+  # Twitter nick for use in Twitter cards and follow button.
+  twitter: aron_bordin # if no twitter in this config, the twitter follow button will be removed
+  # GitHub nick for use in follow button in author block.
+  github: aron-bordin
+
+# Twitter account associated with the site if different from owner/author twitter account.
+# Used in Twitter cards.
+twitter:
+
+# Social networking links used in author block underneath posts. Update and remove as you like.
+social:
+  - title: "github"
+    url: "https://github.com/aron-bordin"
+  - title: "linkedin"
+    url: "https://br.linkedin.com/in/aronbordin"
+  - title: "youtube"
+    url: "https://www.youtube.com/channel/UCfnSek-9HPWOx5e2pH7VFgg"
+# Background image to be tiled on all pages
+background:
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+locale:      en_US
+future:      true
+highlighter: pygments
+markdown:    kramdown
+gems:
+  - jekyll-sitemap
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+# Amount of post to show on home page
+paginate: 5
+
+# if true, shows the floatting share buttons
+float_share: true
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: true
+
+  coderay:
+    coderay_line_numbers: nil
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+
+
+{% endhighlight %}
 
 ---
 
 ## Running Jekyll
 
-The preferred method for running Jekyll is with `bundle exec`, but if you're willing to deal gem conflicts feel free to go cowboy with a `jekyll build` or `jekyll serve`.
+If `jekyll build` and `jekyll serve` throw errors you may have to run Jekyll with `bundle exec` instead.
 
 > In some cases, running executables without bundle exec may work, if the executable happens to be installed in your system and does not pull in any gems that conflict with your bundle.
 >
 >However, this is unreliable and is the source of considerable pain. Even if it looks like it works, it may not work in the future or on another machine.
 
-```bash
+{% highlight text %}
 bundle exec jekyll build
 
 bundle exec jekyll serve
-```
+{% endhighlight %}
 
 ---
 
 ## Folder Structure
 
-```bash
+{% highlight bash %}
 hpstr-jekyll-theme/
 ├── _includes
+|    ├── author.html                # Author panel
 |    ├── browser-upgrade.html       # prompt to upgrade browser on < IE8
+|    ├── disqus_comments.html       # disqus comment panel
 |    ├── footer.html                # site footer
 |    ├── head.html                  # site head
 |    ├── navigation.html            # site navigation
 |    └── scripts.html               # jQuery, plugins, GA, etc
 ├── _layouts
 |    ├── page.html                  # page layout
-|    ├── page.html                  # post-index layout used on home page
-|    └── post.html                  # post layout
+|    ├── post-index.html            # post layout used on home page
+|    └── post.html                  # post layout used on reading
 ├── _posts
 ├── _sass                           # Sass partials
 ├── assets
@@ -79,11 +185,10 @@ hpstr-jekyll-theme/
 |    └── └── vendor                 # jQuery and Modernizr scripts
 ├── images                          # images for posts and pages
 ├── _config.yml                     # Jekyll options
-├── about/                          # about page
 ├── posts/                          # all posts
 ├── tags/                           # all posts grouped by tag
 └── index.html                      # home page with pagination
-```
+{% endhighlight %}
 
 ---
 
@@ -95,45 +200,94 @@ Most of the variables found here are used in the .html files found in `_includes
 
 Create a [Disqus](http://disqus.com) account and change `disqus_shortname` in `_config.yml` to the Disqus *shortname* you just setup. By default comments appear on all post and pages if you assigned a shortname. To disable commenting on a post or page, add the following to its YAML Front Matter:
 
-```yaml
+{% highlight yaml %}
 comments: false
-```
+{% endhighlight %}
 
 ### Social Share Links
 
 To disable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
 
-```yaml
+{% highlight yaml %}
 share: false
-```
+{% endhighlight %}
+
+### Floating Social Share Links
+
+To enable floating share links on the left of the screen, edit it on `_config.yml`:
+
+{% highlight yaml %}
+float_share: true
+{% endhighlight %}
+
 
 ### Owner/Author Information
 
-Change your name, and avatar photo (200x200 pixels or larger), email, and social networking URLs. If you want to link to an external image on Gravatar or something similar you'll need to edit the path in `navigation.html` since it assumes it is located in `/images`.
+Change your name, and avatar photo (200x200 pixels or larger), email, and social networking URLs. If you want to link to an external image on Gravatar or something similar you'll need to edit the path in `_includes/author.html` since it assumes it is hosted on your site.
 
 ### Google Analytics and Webmaster Tools
 
 Your Google Analytics ID goes here along with meta tags for [Google Webmaster Tools](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35179) and [Bing Webmaster Tools](https://ssl.bing.com/webmaster/configure/verify/ownershi) site verification.
 
-### Navigation Links
+### Top Menu - Navigation Links
 
-To add additional links in the drop down menu edit `_data/navigation.yml`. Use the following format to set the URL and title for as many links as you'd like. *External links will open in a new window.*
+To add additional links in the menu edit `_config.yml`. Use the following format to set the URL and title for as many links as you'd like. *External links will open in a new window..* You can create a sub-category using the `submenu` item. Also, you can list your post categories setting the `type: 'categories'`
 
-```yaml
-- title: Portfolio
-  url: /portfolio/
 
-- title: Made Mistakes
-  url: http://mademistakes.com  
-```
+{% highlight yaml %}
+menu:
+  - title: 'Home'
+    url: '/'
+  - title: 'Fork'
+    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
+  - title: 'Install'
+    url: '/theme-setup/'
+  - title: 'Tags'
+    url: '/tags'
+  - title: 'Categories'
+    url: '/categories'
+    type: 'categories'
+  - title: 'Favorites'
+    url: '#'
+    submenu:
+      - title: 'highlighter'
+        url: '/code-highlighting-post/'
+      - title: 'intro'
+        url: '/readability-post/'
+{% endhighlight %}
+
 
 ---
 
-## Adding New Content
+## Adding New Content with Octopress
 
-Posts are stored in the `_posts` directory and named according to the `YEAR-MONTH-DAY-title.MARKUP` format as per [the usual](https://jekyllrb.com/docs/posts/).
+While completely optional, I've included Octopress and some starter templates to automate the creation of new posts and pages. To take advantage of it start by installing the [Octopress](https://github.com/octopress/octopress) gem if it isn't already.
 
-To streamline the creation of posts and pages, [Jekyll::Compose](https://github.com/jekyll/jekyll-compose) and [Octopress](https://github.com/octopress/octopress) are great plugins you can install to automate this process.
+{% highlight bash %}
+$ gem install octopress
+{% endhighlight %}
+
+### New Post
+
+Default command
+
+{% highlight bash %}
+$ octopress new post "Post Title"
+{% endhighlight %}
+
+Default works great if you want all your posts in one directory, but if you're like me and want to group them into subfolders like `/posts`, `/portfolio`, etc. Then this is the command for you. By specifying the DIR it will create a new post in that folder and populate the `categories:` YAML with the same value.
+
+{% highlight bash %}
+$ octopress new post "New Portfolio Post Title" --dir portfolio
+{% endhighlight %}
+
+### New Page
+
+To create a new page use the following command.
+
+{% highlight bash %}
+$ octopress new page new-page/
+{% endhighlight %}
 
 ---
 
@@ -144,34 +298,6 @@ For the most part you can leave these as is since the author/owner details are p
 ### Reading Time
 
 On by default. To turn off remove `reading_time` from `_config.yml`. Default words per minute is set at 200 and can changed by updating `words_per_minute` in `_config.yml`.
-
-### Feature Images
-
-A good rule of thumb is to keep feature images nice and wide so you don't push the body text too far down. An image cropped around around 1024 x 256 pixels will keep file size down with an acceptable resolution for most devices. If you want to serve these images responsively I'd suggest looking at the [Jekyll Picture Tag](https://github.com/scottjehl/picturefill)[^2] plugin.
-
-The two layouts make the assumption that the feature images live in the *images* folder. To add a feature image to a post or page just include the filename in the front matter like so.
-
-```yaml
-image:
-  feature: feature-image-filename.jpg
-  thumb: thumbnail-image.jpg #keep it square 200x200 px is good
-```
-
-If you want to apply attribution to a feature image use the following YAML front matter on posts or pages. Image credits appear directly below the feature image with a link back to the original source.
-
-```yaml
-image:
-  feature: feature-image-filename.jpg
-  credit: Michael Rose #name of the person or site you want to credit
-  creditlink: http://mademistakes.com #url to their site or licensing
-```
-
-By default the `<div>` containing feature images is set to have a minimum height of 400px with CSS. Anything taller is hidden with an `overflow: hidden` declaration. You can customize the height of the homepage feature image and those appearing on posts/pages by modifying the following variables in `/_sass/_variables.scss`.
-
-```scss
-$feature-image-height: 400px; // min 150px recommended
-$front-page-feature-image-height: 400px; // min 150px recommended
-```
 
 #### Post/Page Thumbnails for OG and Twitter Cards
 
@@ -185,6 +311,14 @@ Here's an example of what a tweet to your site could look like if you activate T
 
 Video embeds are responsive and scale with the width of the main content block with the help of [FitVids](http://fitvidsjs.com/).
 
+Adding YouTube video embeds causes errors when building your Jekyll site. To fix wrap the html within `{::nomarkdown}` tags. Example below:
+
+{% highlight html %}
+{::nomarkdown}
+<iframe width="560" height="315" src="http://www.youtube.com/embed/PWf4WUoMXwg" frameborder="0" allowfullscreen></iframe>
+{:/nomarkdown}
+{% endhighlight %}
+
 ### Twitter Cards
 
 Twitter cards make it possible to attach images and post summaries to Tweets that link to your content. Summary Card meta tags have been added to `head.html` to support this, you just need to [validate and apply your domain](https://dev.twitter.com/docs/cards) to turn it on.
@@ -192,6 +326,26 @@ Twitter cards make it possible to attach images and post summaries to Tweets tha
 ### Link Post Type
 
 Link blog like a champ by adding `link: http://url-you-want-linked` to a post's YAML front matter. Arrow glyph links to the post's permalink and the the `post-title` links to the source URL. Here's an [example of a link post]({{ site.url }}/sample-link-post/) if you need a visual.
+
+---
+
+## Style Customization
+
+Here you'll find some useful scss variables to help you to customize your Blog interface. All variables can be found at `_sass/_variables.scss`.
+
+#### Top Navbar Size
+
+To change its size, edit the **`$menu-height`** value. It's recommended a value between 50px and 100px. This variable will automatically update the icon and menu size for you.
+
+#### Top Navbar Colors
+
+The navbar uses two colors, the top color and overflow color. The top color represents the navbar color when the window is not scrolled and the overflow color represents the color when we have a sufficient scroll to change its color.
+
+You can change these colors using the **`$menu-top`** and **`$menu-overflow`** variable values.
+
+#### Top Navbar hover color
+
+The color that you see in the item under the mouse can be changed in the **`$header-margin`** variable.
 
 ---
 
@@ -203,9 +357,9 @@ For example if you wanted a red background instead of white you'd change `$bodyc
 
 To modify the site's JavaScript files I setup a Grunt build script to lint/concatenate/minify all scripts into `scripts.min.js`. [Install Node.js](http://nodejs.org/), then [install Grunt](http://gruntjs.com/getting-started), and then finally install the dependencies for the theme contained in `package.json`:
 
-```bash
+{% highlight bash %}
 npm install
-```
+{% endhighlight %}
 
 From the theme's root, use `grunt` to concatenate JavaScript files and optimize `.jpg`, `.png` and `.svg` files in the `images/` folder.
 
@@ -215,7 +369,7 @@ You can also use `grunt dev` in combination with `bundle exec jekyll serve` to w
 
 ## Questions?
 
-Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@mmistakes](http://twitter.com/mmistakes) or [file a GitHub Issue](https://github.com/mmistakes/hpstr-jekyll-theme/issues/new). And if you make something cool with this theme feel free to let me know.
+Having a problem getting something to work or want to know why I setup something in a certain way?  [File a GitHub Issue](http://github.com/aron-bordin/neo-hpstr-jekyll-theme/issues/new). And if you make something cool with this theme feel free to let me know.
 
 ---
 
