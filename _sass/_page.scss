@@ -200,6 +200,7 @@ header .entry-meta {
 .pagination {
 	margin: 20px 10px;
 	text-align: center;
+	color: lighten($header-text-color,20);
 	ul {
 		display: inline;
 		margin-left: 10px;
@@ -211,6 +212,14 @@ header .entry-meta {
 	}
 	.current-page {
 		font-weight: 700;
+	}
+	.btn {
+		color: lighten($header-text-color,20);
+		border: lighten($header-text-color,20);
+		&:hover {
+			background-color: lighten($header-text-color,20);
+			color: $text-color;
+		}
 	}
 }
 
@@ -405,6 +414,9 @@ ul.social-buttons li a:active {
 	color: lighten($text-color,20);
 	a {
 		color: lighten($text-color,20);
+		&:hover {
+			color: $black;
+      }
 	}
 }
 
@@ -496,17 +508,17 @@ ul.social-buttons li a:active {
 		text-align: center;
 	}
 	h2 {
-		color: $white;
+		color: $header-text-color;
 	}
 	h1 {
 		font-weight: 700;
 		margin-bottom: 20px;
 		@include font-rem(32);
-		color: $white;
-		text-shadow: 1px 1px 4px rgba($base-color, 0.6);
+		color: $header-text-color;	
+		text-shadow: 1px 1px 4px lighten($black,20);
 		display: block;
 		a {
-			color: $white;
+			color: $header-text-color;
 		}
 		@media #{$medium} {
 			@include font-rem(26);
@@ -522,7 +534,7 @@ ul.social-buttons li a:active {
 		}
 	}
 	p {
-		color: $white;
+		color: $header-text-color;
 	}
 }
 .header-menu {

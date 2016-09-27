@@ -52,8 +52,16 @@ owner:
   # google plus id, include the '+', eg +mmistakes
   google_plus: +MikeChambers1
 
+# Social networking links used in author block underneath posts. Update and remove as you like.
+social:
+  - title: "github"
+    url: "https://github.com/miesch1"
+#  - title: "linkedin"
+#    url: "https://www.linkedin.com/in/mike-chambers"
+#   - title: "youtube"
+#    url: "https://www.youtube.com/channel/UCfnSek-9HPWOx5e2pH7VFgg"
 # Background image to be tiled on all pages
-background: 
+background: background.png
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
@@ -69,9 +77,6 @@ highlighter: rouge
 markdown:    kramdown
 gems:
   - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-gist
-  - jekyll-feed
 sass:
   sass_dir: _sass
   style: compressed
