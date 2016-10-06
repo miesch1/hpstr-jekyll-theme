@@ -200,24 +200,34 @@ header .entry-meta {
 .pagination {
 	margin: 20px 10px;
 	text-align: center;
-	color: lighten($header-text-color,20);
 	ul {
 		display: inline;
 		margin-left: 10px;
 		margin-right: 10px;
-		color: lighten($header-text-color,20);
+		a {
+			color: lighten($text-color,20);
+			&:hover {
+				color: $black;
+			}
+		}
 	}
 	li {
 		padding-left: 4px;
 		padding-right: 4px;
-		color: lighten($header-text-color,20);
+		a {
+			color: lighten($text-color,20);
+			&:hover {
+				color: $black;
+			}
+		}
 	}
 	.current-page {
+		color: lighten($header-text-color,20);
 		font-weight: 700;
 	}
 	.btn {
 		color: lighten($header-text-color,20);
-		border: lighten($header-text-color,20);
+		border-color: lighten($header-text-color,20);
 		&:hover {
 			background-color: lighten($header-text-color,20);
 			color: $text-color;
@@ -418,7 +428,7 @@ ul.social-buttons li a:active {
 		color: lighten($text-color,20);
 		&:hover {
 			color: $black;
-      }
+		}
 	}
 }
 

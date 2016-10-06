@@ -17,22 +17,16 @@ logo:             images/logo.png # logo visible in the topbar
 menu:
   - title: 'Home'
     url: '/'
-  - title: 'Fork'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
-  - title: 'Install'
-    url: '/theme-setup/'
-  - title: 'Tags'
-    url: '/tags'
+  - title: 'Blog'
+    url: '/posts/'
+  - title: 'About'
+    url: '/about/'
+  - title: 'Contact'
+    url: '/contact/'
   - title: 'Categories'
     url: '/categories'
     type: 'categories'
-  - title: 'Favorites'
-    url: '#'
-    submenu:
-      - title: 'Code Highlighter'
-        url: '/intro/code-highlighting-post/'
-      - title: 'Sample Post'
-        url: '/intro/sample-post/'
+
 
 # Owner/author information
 owner:          
