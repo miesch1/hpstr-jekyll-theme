@@ -4,7 +4,7 @@ description:      Simple Matter of Coding
 disqus_shortname: codingmatter
 reading_time:     false
 words_per_minute: 200
-logo:             images/logo.png # logo visible in the topbar
+logo:             images/logo1.png # logo visible in the topbar
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 #url: http://www.codingmatter.com
@@ -19,20 +19,17 @@ menu:
     url: '/'
   - title: 'Blog'
     url: '/posts/'
-  - title: 'About'
-    url: '/about/'
-  - title: 'Contact'
-    url: '/contact/'
   - title: 'Categories'
     url: '/categories'
     type: 'categories'
-
+  - title: 'About'
+    url: '/about/'
 
 # Owner/author information
 owner:          
   name:           Mike Chambers
   avatar:         images/avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
+  bio:            "Hi there, just another tech junkie here. I'm an Electrical/Computer Engineer by education, but mainly a C# developer by trade. I'm a big fan of embedded systems and enjoy programming Raspberry Pis and Arduinos in my free time. I look forward to documenting some of my projects here."
   email:          ...e@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   #twitter:        
@@ -48,8 +45,8 @@ owner:
 
 # Social networking links used in author block underneath posts. Update and remove as you like.
 social:
-  - title: "github"
-    url: "https://github.com/miesch1"
+# - title: "github"
+#   url: "https://github.com/miesch1"
 #  - title: "linkedin"
 #    url: "https://www.linkedin.com/in/mike-chambers"
 #   - title: "youtube"

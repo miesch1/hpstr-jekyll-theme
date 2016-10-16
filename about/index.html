@@ -1,0 +1,53 @@
+---
+layout: post-index
+title:  "&lt;Simple.Matter.of.Coding/&gt;"
+description: "About the author..."
+comments: false
+---
+
+<div class="read-more">
+  <!--<div class="read-more-header">
+    <a href="{{ site.owner.site }}" class="read-more-btn">About the Author</a>
+  </div> --><!-- /.read-more-header -->
+  <div class="read-more-content author-info">
+    <h3>{{site.owner.name}}</h3>
+    <div class="author-container">
+      <img class="author-img" src="{{site.url}}/{{site.owner.avatar}}" alt="{{site.owner.name}}" />
+      <div class="author-bio">{{site.owner.bio}}</div>
+    </div>
+    <div class="author-share">
+      <ul class="list-inline social-buttons">
+		{% if site.owner.email %}<li>
+			<a onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01NwyFqhfarZqu55K_AUX5Eg\x3d\x3d\x26c\x3dyDtB3ADx4XW6ZfvdnqerFwdylpOOav1smrHpcwxli3U\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=550,height=400'); return false;" title="Reveal this e-mail address"><i class="fa fa-fw fa-envelope"></i> Email</a>
+		</li>{% endif %}
+		{% if site.owner.twitter %}<li>
+			<a href="https://twitter.com/{{ site.owner.twitter }}"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+		</li>{% endif %}
+		{% if site.owner.facebook %}<li>
+			<a href="https://facebook.com/{{ site.owner.facebook }}"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
+		</li>{% endif %}
+		{% if site.owner.google_plus %}<li>
+			<a href="https://google.com/{{ site.owner.google_plus }}"><i class="fa fa-fw fa-google-plus"></i> Google+</a>
+		</li>{% endif %}
+		{% if site.owner.linkedin %}<li>
+			<a href="https://linkedin.com/in/{{ site.owner.linkedin }}"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+		</li>{% endif %}
+		{% if site.owner.github %}<li>
+			<a href="https://github.com/{{ site.owner.github }}"><i class="fa fa-fw fa-github"></i> GitHub</a>
+		</li>{% endif %}
+		{% if site.owner.stackexchange %}<li>
+			<a href="http://stackexchange.com/users/4635929/{{ site.owner.stackexchange }}"><i class="fa fa-fw fa-stack-exchange"></i> Stackexchange</a>
+		</li>{% endif %}
+		{% if site.owner.instagram %}<li>
+			<a href="https://instagram.com/{{ site.owner.instagram }}"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+		</li>{% endif %}
+		{% if site.owner.flickr %}<li>
+			<a href="https://www.flickr.com/photos/{{ site.owner.flickr }}"><i class="fa fa-fw fa-flickr"></i> Flickr</a>
+		</li>{% endif %}
+		{% if site.owner.tumblr %}<li>
+			<a href="http://{{ site.owner.tumblr }}.tumblr.com"><i class="fa fa-fw fa-tumblr"></i> Tumblr</a>
+		</li>{% endif %}
+      </ul>
+    </div>
+  </div>
+</div>
