@@ -1,7 +1,7 @@
 ---
 layout: post-index
 title: "&lt;Simple.Matter.of.Coding/&gt;"
-description: "Tutorials, examples, snippets, and other minor details..."
+subtitle: "Tutorials, examples, snippets, and other minor details"
 comments: false
 ---
 
@@ -30,6 +30,9 @@ comments: false
     {% else %}
       <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
     {% endif %}
+	{% if page.subtitle %}
+		  <h2 class="post-subtitle">{{ post.subtitle }}</h2>
+	  {% endif %}
   </header>
   <div class="entry-content">
     {% if post.content contains "<!-- more -->" %}

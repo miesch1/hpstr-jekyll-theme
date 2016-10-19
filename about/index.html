@@ -1,7 +1,7 @@
 ---
 layout: post-index
 title:  "&lt;Simple.Matter.of.Coding/&gt;"
-description: "About the author..."
+subtitle: "About the author"
 comments: false
 ---
 
@@ -15,9 +15,11 @@ comments: false
       <img class="author-img" src="{{site.url}}/{{site.owner.avatar}}" alt="{{site.owner.name}}" />
       <div class="author-bio">{{site.owner.bio}}</div>
     </div>
+	<br/>
     <div class="author-share">
       <ul class="list-inline social-buttons">
 		{% if site.owner.email %}<li>
+		    <!-- NOTE: It seems modern browsers no longer allow you to hide the address bar for security reasons. -->
 			<a onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01NwyFqhfarZqu55K_AUX5Eg\x3d\x3d\x26c\x3dyDtB3ADx4XW6ZfvdnqerFwdylpOOav1smrHpcwxli3U\x3d', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=550,height=400'); return false;" title="Reveal this e-mail address"><i class="fa fa-fw fa-envelope"></i> Email</a>
 		</li>{% endif %}
 		{% if site.owner.twitter %}<li>
