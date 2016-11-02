@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello World!
-subtitle: (i.e., Jekyll "Official Support" on Windows 10 WSL)
+subtitle: (i.e., "Official" Jekyll Support on Windows 10 WSL)
 description: "A round-about intro to my blog and how to use Jekyll on Windows."
 tags: [Jekyll, Windows 10, WSL]
 categories: [Windows]

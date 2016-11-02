@@ -76,11 +76,10 @@ $(document).ready(function(){
     "navbars": [
       {
         "position": "bottom",
+		// NOTE: Doesn't seem to to anything for mobile menu. Only the one in scripts.min.js seems to affect the menu.
         "content": [
           "<a class='fa fa-search' href='/search'></a>",
-          "<a class='fa fa-envelope' href='#/'></a>",
-          "<a class='fa fa-twitter' href='#/'></a>",
-          "<a class='fa fa-facebook' href='#/'></a>"
+          "<a class='fa fa-envelope' href='http://www.google.com/recaptcha/mailhide/d?k\x3d01NwyFqhfarZqu55K_AUX5Eg\x3d\x3d\x26c\x3dyDtB3ADx4XW6ZfvdnqerFwdylpOOav1smrHpcwxli3U\x3d' title='Reveal this e-mail address'></a>"
         ]
       }
     ]

@@ -50,10 +50,11 @@
   <div class="header-title">
     <div class="header-title-wrap">
       <h1>{{ page.title }}</h1>
-      {% if page.date %}
-        <h2><span class="entry-date date published updated"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></span></h2>
-      {% else %}
+      {% if page.subtitle %}
         <h2>{{ page.subtitle }}</h2>
+      {% endif %}
+      {% if page.date %}
+        <h3><span class="entry-date date published updated"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></span></h3>
       {% endif %}
 
       {% if site.reading_time and page.layout == 'post' %}
@@ -62,12 +63,8 @@
           {% assign readtime = content | strip_html | number_of_words | divided_by:site.words_per_minute %}
           Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
         </p><!-- /.entry-reading-time -->
-      {% else %}
-          <p class="entry-reading-time">
-            &nbsp;
-          </p><!-- /.entry-reading-time -->
       {% endif %}
-		<div class="adsense" style="margin-bottom: 0px;">
+		<div class="adsense" style="margin-top: 20px;">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- Made Mistakes 320x50 -->
 			<ins class="adsbygoogle"
