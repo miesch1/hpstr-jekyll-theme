@@ -23,7 +23,7 @@ body {
 	// Dotted line underlines for links
 	p > a,
 	li > a {
-		border-bottom: 1px dotted lighten($link-color, 50);
+		border-bottom: 1px dotted lighten($link-color, 15);
 		&:hover {
 			border-bottom-style: solid;
 		}
@@ -106,6 +106,18 @@ body {
 		color: $white;
 		text-decoration: none;
 	}
+}
+
+// Center images
+img {
+	display: block;
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	bottom: 0; 
+	margin: auto;
+	min-width: 25%;
+	max-width:75%;
 }
 
 // Single Post and Page
