@@ -49,7 +49,7 @@ Enabling this feature in Windows was a breeze. Just enable it in Windows Feature
 
 <a href="{{ site.url }}/images/Blog/2016/Win10Bash.jpg"><img src="{{ site.url }}/images/Blog/2016/Win10Bash.jpg" alt="Bash on Win10" style="max-width:100%;"></a>
 
-Now that is amazing! Ubuntu bash commands available on Windows, including `apt-get` to obtain Linux binaries. So now to install Ruby. I found some great tutorials on how to do this with RVM. I found the steps <a href="https://richonrails.com/articles/rails-on-windows-10-via-wsl>" target="_blank">in this Ruby on Rails blog post</a> the most helpful. To summarize: 
+Now that is amazing! Ubuntu bash commands available on Windows, including `apt-get` to obtain Linux binaries. So now to install Ruby. I found some great tutorials on how to do this with RVM. I found the steps <a href="https://richonrails.com/articles/rails-on-windows-10-via-wsl" target="_blank">in this Ruby on Rails blog post</a> the most helpful. To summarize: 
 
 {% highlight bash %}
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
