@@ -52,6 +52,12 @@ body {
 		font-weight: 700;
 		@include font-rem(32);
 		color: lighten($base-color,20);
+		@media #{$xsmall} {
+			@include font-rem(28);
+		}
+		@media #{$small} {
+			@include font-rem(38);
+		}
 		@media #{$medium} {
 			@include font-rem(48);
 		}
@@ -63,8 +69,17 @@ body {
 		margin: 0;
 		@include font-rem(18);
 		color: lighten($base-color,40);
+		@media #{$xsmall} {
+			@include font-rem(14);
+		}
+		@media #{$small} {
+			@include font-rem(19);
+		}
 		@media #{$medium} {
 			@include font-rem(24);
+		}
+		@media #{$large} {
+			@include font-rem(30);
 		}
 	}
 	h3 {
@@ -72,8 +87,17 @@ body {
 		@include font-rem(14);
 		text-transform: uppercase;
 		color: lighten($base-color,60);
+		@media #{$xsmall} {
+			@include font-rem(9);
+		}
+		@media #{$small} {
+			@include font-rem(15);
+		}
 		@media #{$medium} {
 			@include font-rem(20);
+		}
+		@media #{$large} {
+			@include font-rem(26);
 		}
 	}
 	p {
@@ -106,18 +130,6 @@ body {
 		color: $white;
 		text-decoration: none;
 	}
-}
-
-// Center images
-img {
-	display: block;
-	top: 0; 
-	left: 0; 
-	right: 0; 
-	bottom: 0; 
-	margin: auto;
-	min-width: 25%;
-	max-width:75%;
 }
 
 // Single Post and Page
@@ -172,6 +184,17 @@ header .entry-meta {
 		padding: 10px 15px;
 		background-color: $white;
 		box-shadow: 0 0 0 0, 0 6px 12px rgba($black,0.1);
+		// Center images
+		img {
+			display: block;
+			top: 0; 
+			left: 0; 
+			right: 0; 
+			bottom: 0; 
+			margin: auto;
+			min-width: 25%;
+			max-width:75%;
+		}
 		@include rounded(3px);
 		@media #{$medium} {
 			margin-left: 10px;
@@ -554,46 +577,46 @@ ul.social-buttons li a:active {
 //		min-height: 300px;
 //	}
 //}
-// .header-toggle{
-// 	display: block;
-// 	@media #{$large} {
-// 		display: none;
-// 	}
-// }
-// .header-title {
-// 	text-align: center;
-// 	position: absolute;
-// 	bottom: 0;
-// 	display: table;
-// 	margin-top: 0;
-// 	width: 100%;
-// 	overflow: hidden;
-// 	.header-title-wrap {
-// 		display: table-cell;
-// 		vertical-align: middle;
-// 		margin: 0 auto;
-// 		text-align: center;
-// 	}
-// 	h2 {
-// 		color: $header-text-color;
-// 	}
-// 	h1 {
-// 		font-weight: 700;
-// 		margin-bottom: 20px;
-// 		@include font-rem(32);
-// 		color: $header-text-color;	
-// 		text-shadow: 1px 1px 4px lighten($black,20);
-// 		display: block;
-// 		a {
-// 			color: $header-text-color;
-// 		}
-// 		@media #{$medium} {
-// 			@include font-rem(26);
-// 		}
-// 		@media #{$large} {
-// 			@include font-rem(36);
-// 		}
-// 	}
+//.header-toggle{
+//	display: block;
+//	@media #{$large} {
+//		display: none;
+//	}
+//}
+//.header-title {
+//	text-align: center;
+//	position: absolute;
+//	bottom: 0;
+//	display: table;
+//	margin-top: 0;
+//	width: 100%;
+//	overflow: hidden;
+//	.header-title-wrap {
+//		display: table-cell;
+//		vertical-align: middle;
+//		margin: 0 auto;
+//		text-align: center;
+//	}
+//	h2 {
+//		color: $header-text-color;
+//	}
+//	h1 {
+//		font-weight: 700;
+//		margin-bottom: 20px;
+//		@include font-rem(32);
+//		color: $header-text-color;	
+//		text-shadow: 1px 1px 4px lighten($black,20);
+//		display: block;
+//		a {
+//			color: $header-text-color;
+//		}
+//		@media #{$medium} {
+//			@include font-rem(26);
+//		}
+//		@media #{$large} {
+//			@include font-rem(36);
+//		}
+//	}
 //	h1.post-title{
 //		display: block;
 //		@media #{$medium}{
@@ -682,14 +705,17 @@ ul.social-buttons li a:active {
 	height: 100%;
 	a.title {
 		font-size: 1.5rem;
-	    padding-left: 5px;
+		padding-left: 5px;
 		display: none;
 		vertical-align: middle;
 		height: $menu-height - 2;
-		@media #{$medium}{
+		@media #{$xsmall}{
 			display: table-cell;
 		}
 		@media #{$small}{
+			display: table-cell;
+		}
+		@media #{$medium}{
 			display: table-cell;
 		}
 	}
