@@ -53,7 +53,7 @@ body {
 		@include font-rem(32);
 		color: lighten($base-color,20);
 		@media #{$xsmall} {
-			@include font-rem(24);
+			@include font-rem(26);
 		}
 		@media #{$small} {
 			@include font-rem(36);
@@ -70,7 +70,7 @@ body {
 		@include font-rem(18);
 		color: lighten($base-color,40);
 		@media #{$xsmall} {
-			@include font-rem(12);
+			@include font-rem(14);
 		}
 		@media #{$small} {
 			@include font-rem(18);
@@ -88,7 +88,7 @@ body {
 		text-transform: uppercase;
 		color: lighten($base-color,60);
 		@media #{$xsmall} {
-			@include font-rem(8);
+			@include font-rem(10);
 		}
 		@media #{$small} {
 			@include font-rem(14);
