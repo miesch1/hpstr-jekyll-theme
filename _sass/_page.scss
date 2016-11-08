@@ -53,10 +53,10 @@ body {
 		@include font-rem(32);
 		color: lighten($base-color,20);
 		@media #{$xsmall} {
-			@include font-rem(28);
+			@include font-rem(24);
 		}
 		@media #{$small} {
-			@include font-rem(38);
+			@include font-rem(36);
 		}
 		@media #{$medium} {
 			@include font-rem(48);
@@ -70,10 +70,10 @@ body {
 		@include font-rem(18);
 		color: lighten($base-color,40);
 		@media #{$xsmall} {
-			@include font-rem(14);
+			@include font-rem(12);
 		}
 		@media #{$small} {
-			@include font-rem(19);
+			@include font-rem(18);
 		}
 		@media #{$medium} {
 			@include font-rem(24);
@@ -88,10 +88,10 @@ body {
 		text-transform: uppercase;
 		color: lighten($base-color,60);
 		@media #{$xsmall} {
-			@include font-rem(9);
+			@include font-rem(8);
 		}
 		@media #{$small} {
-			@include font-rem(15);
+			@include font-rem(14);
 		}
 		@media #{$medium} {
 			@include font-rem(20);
