@@ -14,6 +14,8 @@ This week I ran into a situation where I needed to do something that I didn't th
 1. I really needed a per-user install.
 2. I really needed the installer to prompt for elevation.
 
+<!-- more -->
+
 I wanted a per-user install so that the application is only visible in Add/Remove Programs for the user who installed it. And my installer performed custom actions which required elevation and I didn't want to require my users to launch the MSI with `msiexec` from a command line with elevated privileges. Turns out that most people are looking for the opposite--a per-user install that doesn't prompt for elevation, like <a href="https://blogs.msdn.microsoft.com/astebner/2007/11/18/using-wix-3-0-to-create-a-per-user-msi-that-does-not-prompt-for-elevation-on-windows-vista/" target="_blank">this excellent post</a> details. So according to those instructions, I figured I would just leave ALLUSERS undefined and then set the opposite InstallPrivileges attribute, namely `Package/@InstallPrivileges="elevated"` (and `Package/@InstallScope="perUser"` for good measure).
 
 With those settings, running my installer from a standard user account without admin rights was not prompting for elevation and my installer was failing. Crap. Back to Googleing, it was surprising how many posts <a href="http://stackoverflow.com/questions/9279713" target="_blank">like this one</a> I found which were answered only by saying that per-user installs should never require elevation. That may very well be the case, but I have a legitimate need to do this. Luckily, I found a post[^2] that offered the clue I needed: `Package/@InstallScope` doesn't  support per-user, elevated packages!
