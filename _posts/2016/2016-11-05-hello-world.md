@@ -35,7 +35,7 @@ This worked! I then ran `gem update` and got back to Jekyll 3.2.1 and it continu
 I uninstalled everything and tried the other method listed on Jekyll's Windows page using Chocolately[^7] , as well as a portable Jekyll package[^8]--both with similar unsettling results. It all kind of seemed like a hack job. Around this time I considered using a Linux virtual machine to host a Jekyll installation, but it seems fate was on my side. I had just a day or two previously received the Windows 10 Anniversary update (version 1607). What does this have to do with the price of rice in China, you ask?
 
 [^7]: <https://davidburela.wordpress.com/2015/11/28/easily-install-jekyll-on-windows-with-3-command-prompt-entries-and-chocolatey/>
-[^8]: <https://blogs.msdn.microsoft.com/wsl/2016/07/08/bash-on-ubuntu-on-windows-10-anniversary-update/>
+[^8]: <http://www.madhur.co.in/blog/2013/07/20/buildportablejekyll.html>
 
 Enter the Windows Subsystem for Linux (WSL)[^9].
 
