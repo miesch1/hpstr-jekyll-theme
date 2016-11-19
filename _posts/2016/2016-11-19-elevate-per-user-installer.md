@@ -11,8 +11,8 @@ I am a huge fan of the open source WiX Toolset[^1] for authoring Windows install
 [^1]: <http://wixtoolset.org/>
 
 This week I ran into a situation where I needed to do something that I didn't think would be so hard to figure out.
-1. I really needed a per-user install.
-2. I really needed the installer to prompt for elevation.
+- I really needed a per-user install.
+- I really needed the installer to prompt for elevation.
 
 <!-- more -->
 
