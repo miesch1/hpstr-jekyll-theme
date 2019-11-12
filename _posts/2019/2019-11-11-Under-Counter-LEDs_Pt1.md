@@ -47,7 +47,7 @@ Now I was ready for the fun part to begin. Again, to make this clean and tempora
 
 <img src="{{ site.url }}/images/Blog/2019/LED Strip Interconnect Wiring.jpg" alt="LED Strip Interconnect Wiring">
 
-Finally, I was able to start installing the LEDs on the perimeter of each section of cabinets. On the top, I just follwed the inside of the crown molding. On the bottom, I just followed the inner trim. Where two cabinets joined together, I had to use a hack saw blade to carefully clear a path for the LEDs. Here are a few samples looking up from underneath the cabinets:
+Finally, I was able to start installing the LEDs on the perimeter of each section of cabinets. On the top, I just followed the inside of the crown moulding. On the bottom, I just followed the inner trim. Where two cabinets joined together, I had to use a hack saw blade to carefully clear a path for the LEDs. Here are a few samples looking up from underneath the cabinets:
 
 <img src="{{ site.url }}/images/Blog/2019/LED Strip Spanning Cabinets.jpg" alt="LED Strip Spanning Cabinets">
 <img src="{{ site.url }}/images/Blog/2019/LED Strip Spanning Cabinets w Bend.jpg" alt="LED Strip Spanning Cabinets w/ Bend">
